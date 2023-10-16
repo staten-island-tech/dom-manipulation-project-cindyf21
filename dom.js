@@ -5,13 +5,15 @@ const DOMSelectors = {
     //select the textbox
     //select ALL the h2s in one property 
 };
-// console.log(DOMSelectors.h2s);
+console.log(DOMSelectors.form);
+console.log(DOMSelectors.firstName);
+console.log(DOMSelectors.h2s);
 
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
     console.log(DOMSelectors.firstName.value);
     // need to add card/name object
     DOMSelectors.h2s.forEach(
-        (el) => el.textContent = DOMSelectors.firstName.value
+        (el) => (el.textContent = DOMSelectors.firstName.value)
     );
 });
