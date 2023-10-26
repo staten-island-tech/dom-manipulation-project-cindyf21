@@ -1,0 +1,23 @@
+.gallery{
+    font-size: 25px;
+    padding: 3%;
+    background-color: rgb(241, 206, 141);
+    margin: 1rem;
+    max-width: 80%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.image {
+    max-width: 50%;
+    margin: auto;
+}
+
+.button {
+    margin: auto;
+    font-size: 15px;
+}
+.card-title {
+    text-align: center;
+    font-size: 35px;
+}
