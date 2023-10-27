@@ -32,21 +32,16 @@ console.log(DOMSelectors.firstName.value);
 DOMSelectors.h2s.forEach((el) => (el.textContent = DOMSelectors.firstName.value));
 });
 
-
-
 function makeAlbum() {
-
+    
 }
 
-function addcard() {
-
+function remove() {
+    let btns = document.querySelectorAll(".button");
+    console.log(btns);
+    btns.forEach((button) => button.addEventListener('click', function(event){
+        console.log(event.target.parentElement);
+    }));
 }
-
-function clearFields() {
-
-}
-
-function addRemoveButton() {
-
-}     
+remove();
 
