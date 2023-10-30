@@ -37,9 +37,9 @@ function makeAlbum() {
 }
 
 function remove() {
-    const btns = document.querySelectorAll(".button");
-    btns.forEach((button) => button.addEventListener("click", function(){
-        btns.parentElement.remove();
+    const btn = document.querySelectorAll(".button");
+    btn.forEach((button) => button.addEventListener("click", function(){
+        btn.parentElement.remove();
     }));
 }
 remove();
