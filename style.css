@@ -1,24 +1,42 @@
-.gallery{
-    font-size: 25px;
-    padding: 3%;
-    background-color: rgb(241, 206, 141);
-    margin: 1rem;
-    max-width: 80%;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
+body {
+    background-color: rgb(193, 225, 253);
 }
+
+#form {
+    font-size: 20px;
+}
+
+.output {
+    background-color:  rgb(83, 146, 218);
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    width: 500px;
+    height: 500px;
+}
+
+.description {
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding: 5%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
 .image {
-    max-width: 50%;
+    max-width: 70%;
     margin: auto;
 }
 
 .button {
     margin: auto;
-    font-size: 18px;
-    background-color: rgb(255, 142, 37);
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 0.8%;
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
-.card-title {
-    text-align: center;
-    font-size: 35px;
-}
+
+
+

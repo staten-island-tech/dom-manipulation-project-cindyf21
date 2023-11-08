@@ -1,26 +1,35 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Manipulation</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> DOM Manipulation </title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div></div>
-    <form action="" id="form">   
-        <label for="dog">Dog</label>
-        <input type="text" name="dog" class="dog">
-        <input type="submit" value="Click Here">
-    </form>
+  <form id="form">
+    <div id="input" class="input">
+        <h1> Create Your Pet! </h1>
 
-    <div class="gallery" id="box">
-        <h2 class="card-title">Example</h2>
-        <img class="image" src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*" alt="">
-        <button class="button">Remove</button>
-    </div>  
+        <label for="animal"> Animal: </label>
+        <input id="animal">
 
+        <label for="color"> Color: </label>
+        <input id="color">
 
-    <script src="dom.js" ></script>
+        <label for="petname"> Pet Name: </label>
+        <input id="petname"> 
+
+        <button id="submit" type="submit"> Submit </button>
+    </div>
+    
+  </form>
+
+  <div id="output"></div>
+
 </body>
+<script src="dom.js"></script>
+
 </html>

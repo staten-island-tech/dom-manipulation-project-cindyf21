@@ -1,46 +1,52 @@
-const DOMSelectors = {
-    form: document.querySelector("#form"), 
-    dog: document.querySelector(".dog"),
-    h2s: document.querySelectorAll(".h2"),
-};
-console.log(DOMSelectors.h2s);
-
-DOMSelectors.form.addEventListener("submit", function(event){ 
-event.preventDefault();
+DOMSelectors = {
+    form: document.getElementById("form"),
+    input: document.getElementById("input"),
+    animal: document.getElementById("animal"),
+    color: document.getElementById("color"),
+    petname: document.getElementById("petname"),
+    output: document.getElementById("output"),
+    image: document.getElementById("image"),
+  };
+  
+  DOMSelectors.form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    makeAlbum();
+    clearFields();
+    remove();
+  });
+  
+  function makeAlbum() {
+    animal = DOMSelectors.animal.value;
+    color = DOMSelectors.color.value;
+    petname = DOMSelectors.petname.value;
+  
+    DOMSelectors.output.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="output">
+              <p class="description" > ${petname}: ${color} ${animal} </p>
+              <img class="image" src="https://img.freepik.com/photos-premium/lapin-chapeau-bleu-yeux-bleus-porte-chapeau-bleu_902338-17181.jpg">
+              <div> <button class="button"> Remove </button> </div>
+      </div>`
+    );
+  }
+  
+  function clearFields() {
+      DOMSelectors.animal.value = "";
+      DOMSelectors.color.value = "";
+      DOMSelectors.petname.value = "";
+  }
+  
+  function remove() {
+    const buttons = document.querySelectorAll(".button");
+    buttons.forEach((button) => {
+      button.addEventListener("click", function() {
+        this.parentElement.parentElement.remove();
+      });
+    });
+  }
+  
     
-    //const Album = makeAlbum() 
-    //addcard(Album);
-    clearFields()
-    remove()
 
-    document
-        .querySelector(".gallery")
-        .insertAdjacentHTML(
-        "beforebegin",
-      //`<div class="card"><h2 class="card-title">${DOMSelectors.firstName.value}</h2></div>`
-        `<div class="gallery" id="box">
-        <h2 class="card-title">${DOMSelectors.dog.value}</h2>
-        <img class="image" src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*" alt="">
-        <button class="button">Remove</button>
-        </div>`
-    )
 
-console.log(DOMSelectors.dog.value);
-DOMSelectors.h2s.forEach((el) => (el.textContent = DOMSelectors.dog.value));
-});
 
-function clearFields() {
 
-}
-
-function makeAlbum() {
-
-}
-
-function remove() {
-    const btn = document.querySelectorAll(".button");
-    btn.forEach((button) => button.addEventListener("click", function(){
-        button.parentElement.remove();
-    }));
-}
-remove();
