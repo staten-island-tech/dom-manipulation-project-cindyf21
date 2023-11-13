@@ -3,7 +3,7 @@ DOMSelectors = {
     input: document.getElementById("input"),
     animal: document.getElementById("animal"),
     color: document.getElementById("color"),
-    imagelink: document.getElementById("imagelink"),
+    petname: document.getElementById("petname"),
     output: document.getElementById("output"),
     image: document.getElementById("image"),
   };
@@ -18,13 +18,13 @@ DOMSelectors = {
   function makeAlbum() {
     animal = DOMSelectors.animal.value;
     color = DOMSelectors.color.value;
-    imagelink = DOMSelectors.imagelink.value;
+    petname = DOMSelectors.petname.value;
   
     DOMSelectors.output.insertAdjacentHTML(
       "afterbegin",
       `<div class="output">
               <p class="description" > ${color} ${animal} </p>
-              <img class="image" src="">
+              <img class="image" src="https://img.freepik.com/photos-premium/lapin-chapeau-bleu-yeux-bleus-porte-chapeau-bleu_902338-17181.jpg">
               <div> <button class="button"> Remove </button> </div>
       </div>`
     );
@@ -33,7 +33,7 @@ DOMSelectors = {
   function clearFields() {
       DOMSelectors.animal.value = "";
       DOMSelectors.color.value = "";
-      DOMSelectors.imagelink.value = "";
+      DOMSelectors.petname.value = "";
   }
   
   function remove() {
