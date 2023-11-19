@@ -19,12 +19,13 @@ function makeAlbum() {
   animal = DOMSelectors.animal.value;
   color = DOMSelectors.color.value;
   petname = DOMSelectors.petname.value;
+  image = DOMSelectors.image.value;
 
   DOMSelectors.output.insertAdjacentHTML(
     "afterbegin",
     `<div class="output">
             <p class="description" > ${petname}: ${color} ${animal} </p>
-            <img class="image" src="https://img.freepik.com/photos-premium/lapin-chapeau-bleu-yeux-bleus-porte-chapeau-bleu_902338-17181.jpg">
+            <img class="image" src="${image}">
             <div> <button class="button"> Remove </button> </div>
     </div>`
   );
@@ -34,6 +35,7 @@ function clearFields() {
     DOMSelectors.animal.value = "";
     DOMSelectors.color.value = "";
     DOMSelectors.petname.value = "";
+    DOMSelectors.image.value = "";
 }
 
 function remove() {
